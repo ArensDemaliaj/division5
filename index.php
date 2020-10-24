@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- own css -->
+    <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -15,9 +17,12 @@
   <body>
     <?php 
         include_once 'menu.php';
+        if(isset($_COOKIE["fullname"])){
+          echo "Welcome " . $_COOKIE["fullname"];
+        }else{
+          echo "Welcome Anonymous. Please register or login!!!";
+        }
     ?>
-    <h1>Hello, world!</h1>
-
 
   </body>
 </html>

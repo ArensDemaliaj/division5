@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <?php
+        include_once 'menu.php';
+    ?>
     <h1>Let's register</h1>
 
     <form method="post" action="user_register.php">
