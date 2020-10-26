@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>Division 5!</title>
 </head>
 
 <body>
@@ -19,31 +19,43 @@
     include_once 'menu.php';
     if(isset($_GET['fehler'])){
         if($_GET['fehler'] == 2){
-        echo "<h3 class='bg-danger text-center'>Hash misttakse</h3>";
-        echo $_GET['hash'];
         $_GET['fehler'] = 0;
         }
         if($_GET['fehler'] == 1){
-            echo "<h3 class='bg-danger text-center'>No result</h3>";
+            echo "<h3 class='bg-danger text-center'>User does not exist. You might want to register.</h3>";
             $_GET['fehler'] = 0;
             }
     }
     ?>
-    <h1>Let's login</h1>
 
-    <form method="post" action="user_login.php">
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-0 col-md-3 col-lg-4">
         </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <br>
+            <h1>Let's login</h1>
+            <br>
+            <form method="post" action="user_login.php">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="col-sm-0 col-md-3 col-lg-4">
+        </div>
+    </div>
+    </div>
 
 
 </body>
 
 </html>
+

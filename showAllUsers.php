@@ -28,8 +28,7 @@
                 echo "<td style='text-align:center'><a href='editUser.php?id=" . $row["id"] . "'>O </a>";
             }
         } else {
-            //header("location: login.php?fehler=2");
-            echo "You are not admin";
+            header("location: login.php?fehler=2");
         }
         ?>
     </tbody>

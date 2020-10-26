@@ -32,41 +32,54 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>Division 5!</title>
 </head>
 
 <body>
     <?php
         include_once 'menu.php';
     ?>
-    <h1>Let's register</h1>
+   
 
-    <form method="post" action="user_edit.php">
-        <div class="form-group">
-            <label for="id">ID</label>
-            <input type="number" name="id" class="form-control" value="<?php echo $id; ?>">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-0 col-md-3 col-lg-4">
         </div>
-        <div class="form-group">
-            <label for="firstName">Fist Name</label>
-            <input type="text" name="firstName" class="form-control" value="<?php echo $firstName; ?>">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <br>
+            <h3>Edit the user info</h3>
+            <br>
+            <form method="post" action="user_edit.php">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" name="id" class="form-control" value="<?php echo $id; ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Fist Name</label>
+                    <input type="text" name="firstName" class="form-control" value="<?php echo $firstName; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" value="<?php echo $lastName; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="admin">Privileges</label>
+                    <select name="admin">
+                        <option value="0">Non-Admin</option>
+                        <option value="1">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" class="form-control" value="<?php echo $lastName; ?>">
+        <div class="col-sm-0 col-md-3 col-lg-4">
         </div>
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
-        </div>
-        <div class="form-group">
-            <label for="admin">Privileges</label>
-            <select name="admin">
-                <option value="0">Non-Admin</option>
-                <option value="1">Admin</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+</div>
 
 
 </body>

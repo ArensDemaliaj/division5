@@ -5,8 +5,8 @@ $sql = "UPDATE users SET firstname = :fname, lastname = :lname, email = :eml, ad
 
 $sth = $conn->prepare($sql);
 $sth->bindParam(':id', $_POST["id"]);
-$sth->bindParam(':fname', $_POST["firstName"]);
-$sth->bindParam(':lname', $_POST["lastName"]);
+        $sth->bindParam(':fname', $_POST["firstName"]);
+     $sth->bindParam(':lname', $_POST["lastName"]);
 $sth->bindParam(':eml', $_POST["email"]);
 $sth->bindParam(':adm', $_POST["admin"]);
 $sth->execute();  
@@ -14,4 +14,3 @@ $sth->execute();
 header("location:index.php");
 
 ?>
-      
